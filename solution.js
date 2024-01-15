@@ -132,7 +132,9 @@
     }
     console.groupEnd();
 
-    console.log("Minimal interest:", minInterest);
+    minInterest === Number.MAX_VALUE
+      ? console.error("Error: grille is empty")
+      : console.log("Minimal interest:", minInterest);
   };
 
   searchBestOption(grille);
